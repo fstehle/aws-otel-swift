@@ -32,7 +32,7 @@ let package = Package(
         .product(name: "OpenTelemetryProtocolExporterHTTP", package: "opentelemetry-swift"),
         .product(name: "URLSessionInstrumentation", package: "opentelemetry-swift"),
         .product(name: "Installations", package: "KSCrash"),
-        .product(name: "CrashReporter", package: "plcrashreporter", condition: .when(platforms: [.iOS, .macOS, .tvOS, .visionOS]))
+        .product(name: "CrashReporter", package: "plcrashreporter", condition: .when(platforms: [.iOS, .macCatalyst, .macOS, .tvOS, .visionOS]))
       ],
       exclude: ["Sessions/README.md", "Network/README.md", "User/README.md", "GlobalAttributes/README.md", "UIKit/README.md", "AppLaunch/README.md", "SwiftUI/README.md"]
     ),
